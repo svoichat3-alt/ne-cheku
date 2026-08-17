@@ -38,7 +38,8 @@ jobs:
 
     - name: Run Buildozer Build
       run: |
-        buildozer -v android debug
+        # Автоматически принимаем лицензии SDK перед сборкой
+        yes | buildozer -v android debug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
